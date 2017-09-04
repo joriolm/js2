@@ -4,17 +4,129 @@
 
 <p>Click the button to display an alert box.</p>
 
-<button onclick="myFunction()">Try it</button>
+<form>
+            	<div style="margin-left:10%">
+                	<h2>Productos</h2>
+                    <label>Producto 1</label>
+  					<input type="checkbox" name="Productos1" id="Check1" onClick="hideText()" value="true"><br><br>
+                    <label style="margin-left:5%" hidden="true" id="Label1">Cantidad</label>
+                    <input type="text" name="ProCantidad1" id="ProCantidad1" hidden="true" style="margin-left:20px; max-width:50%;" /><br><br>
+                    
+                    <label>Producto 2</label>
+  					<input type="checkbox" name="Productos2" id="Check2" onClick="hideText()" value="true"><br><br>
+                    <label style="margin-left:5%" hidden="true" id="Label2">Cantidad</label>
+                    <input type="text" name="ProCantidad2" id="ProCantidad2" hidden="true" style="margin-left:20px; max-width:50%;" /><br><br>
+                    
+                    <label>Producto 3</label>
+  					<input type="checkbox" name="Productos3" id="Check3" onClick="hideText()" value="true"><br><br>
+                    <label style="margin-left:5%" hidden="true" id="Label3">Cantidad</label>
+                    <input type="text" name="ProCantidad3" id="ProCantidad3" value="" hidden="true" style="margin-left:20px; max-width:50%;" /><br><br> 
+                    
+                    <h2>Laboratorio</h2>
+  					<label>Laboratorio 1</label>
+                    <input type="checkbox" name="Laboratorio1" id="Check4" onClick="hideText()" value="true"><br><br>
+                    <label style="margin-left:5%" hidden="true" id="Label4">Cantidad</label>
+                    <input type="text" name="ProLab1" id="ProLab1" value="" hidden="true" style="margin-left:20px; max-width:50%;" /><br><br>
+                    
+                    <label>Laboratorio 2</label>
+  					<input type="checkbox" name="Laboratorio2" id="Check5" onClick="hideText()" value="true"><br><br>
+                    <label style="margin-left:5%" hidden="true" id="Label5">Cantidad</label>
+                    <input type="text" name="ProLab2" id="ProLab2" value="" hidden="true" style="margin-left:20px; max-width:50%;"  /><br><br>
+
+					<label>Laboratorio 3</label>
+  					<input type="checkbox" name="Laboratorio3" id="Check6" onClick="hideText()" value="true"><br><br>
+                    <label style="margin-left:5%" hidden="true" id="Label6">Cantidad</label>
+                    <input type="text" name="ProLab3" id="ProLab3" value="" hidden="true" style="margin-left:20px; max-width:50%;" /><br><br>
+                    
+                     <label>Nombre:</label><br>
+            		 <input type="text" name="ContactName" id="ContactName" value="" style="margin-left:20px"/><br><br>
+            	 	 <label>Email:</label><br>
+            		 <input type="text" name="ContactEmail" id="ContactEmail" value="" style="margin-left:20px" /><br><br>
+                     <input type="reset" name="clear" id="clear" value="Limpiar" onClick="hideTextClear()" style="margin-left:3%"/>
+                     <!--<input type="button" value="Enviar">-->
+                     <button onClick="sendMail()">Enviar</button>
+                     
+              	</div>
+			</form>
 
 <script>
-function myFunction() {
-	var Email = "someone@example.com";
-    location.href = "mailto:" + Email;
-}
+function sendMail()
+					{
+					var Pro1= document.getElementById("ProCantidad1").value
+					var Pro2= document.getElementById("ProCantidad2").value
+					var Pro3= document.getElementById("ProCantidad3").value
+					var Cant1= document.getElementById("ProLab1").value
+					var Cant2= document.getElementById("ProLab2").value
+					var Cant3= document.getElementById("ProLab3").value
+					var CheckPro1= document.getElementById("Check1").checked
+					var CheckPro2= document.getElementById("Check2").checked
+					var CheckPro3= document.getElementById("Check3").checked
+					var CheckCant1= document.getElementById("Check4").checked
+					var CheckCant2= document.getElementById("Check5").checked
+					var CheckCant3= document.getElementById("Check6").checked
+    				var ContactEmail = document.getElementById("ContactEmail").value
+					var yourMess = "";
+					
+					if ((CheckPro1==true)&&(Pro1!=""))
+					{
+						yourMess=yourMess+" Cantidad de Productos 1 : "+Pro1;
+					}
+					if ((CheckPro1==true)&&(Pro1==""))
+					{
+						yourMess=yourMess+" Cantidad de Productos 1 : "+"Cantidad No Ingresada";
+					}
+					
+					if ((CheckPro2==true)&&(Pro2!="")) 
+					{
+						yourMess=yourMess+"%0D%0A Cantidad de Productos 2 : "+Pro2;
+					}
+					if ((CheckPro2==true)&&(Pro2==""))
+					{
+						yourMess=yourMess+"%0D%0A Cantidad de Productos 2 : "+"Cantidad No Ingresada";
+					}
+					
+					if ((CheckPro3==true)&&(Pro3!="")) 
+					{
+						yourMess=yourMess+"%0D%0A Cantidad de Productos 3 : "+Pro3;
+					}
+					if ((CheckPro3==true)&&(Pro3==""))
+					{
+						yourMess=yourMess+"%0D%0A Cantidad de Productos 3 : "+"Cantidad No Ingresada";
+					}
+					
+					if ((CheckCant1==true)&&(Cant1!="")) 
+					{
+						yourMess=yourMess+"%0D%0A Cantidad de Muestras 1 : "+Cant1;
+					}
+					if ((CheckCant1==true)&&(Cant1==""))
+					{
+						yourMess=yourMess+"%0D%0A Cantidad de Pruebas 1 : "+"Cantidad No Ingresada";
+					}
+					
+					if ((CheckCant2==true)&&(Cant2!="")) 
+					{
+						yourMess=yourMess+"%0D%0A Cantidad de Muestras 2 : "+Cant2;
+					}
+					if ((CheckCant2==true)&&(Cant2==""))
+					{
+						yourMess=yourMess+"%0D%0A Cantidad de Muestras 2 : "+"Cantidad No Ingresada";
+					}
+					
+					if ((CheckCant3==true)&&(Cant3!="")) 
+					{
+						yourMess=yourMess+"%0D%0A Cantidad de Muestras 3 : "+Cant3;
+					}
+					if ((CheckCant3==true)&&(Cant3==""))
+					{
+						yourMess=yourMess+"%0D%0A Cantidad de Muestras 3 : "+"Cantidad No Ingresada";
+					}
+					
+					var mail="servicioalcliente@mpi.net.co?subject="+"Cotización"+"&body="+yourMess+"%0D%0A  %0D%0A Email de Contacto : "+ContactEmail;
+
+    				location.href = "mailto:"+mail;
+					}
+
 </script>
 
 </body>
 </html>
-
-
-
