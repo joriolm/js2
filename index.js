@@ -480,7 +480,7 @@ function hideText()
 					}
 					if (ContactPhone=="")
 					{
-						ContactPhone="Teléfono no Ingresado";
+						ContactPhone="Teléfono noIngresado";
 					}
 					
 					
