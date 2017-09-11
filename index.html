@@ -11,8 +11,25 @@
 
 <body>
 			<div class="pages">
-  			<div data-page="contact" class="page no-toolbar no-navbar">
-    		<div class="page-content">
+  <div data-page="contact" class="page no-toolbar no-navbar">
+    <div class="page-content">
+
+	<div class="navbarpages graybg">
+		<div class="navbar_left">
+			<div class="logo_text">
+            	<a href="index.html"><img src="images/logo1.jpg" width="55px" height="55px"/></a>
+                <img src="images/logo_derecha3.jpg" width="70%" height="50px" style="position:absolute; top:0%; padding-left:10px; max-width:300px; margin-top:20; padding-top:0px; border-top:0;"/>
+            </div>
+		</div>							
+	</div>
+	
+    <div id="pages_maincontent">
+		<br>
+		<a href="index.html" class="backto"><img src="images/icons/black/back.png" alt="" title="" /></a>
+			
+		<h2 class="page_title">Genera tu cotización</h2>
+		<div class="page_single layout_fullwidth_padding">
+              
 			<form style="line-height:1">
             	<div>
                 	<h2>Productos</h2>
@@ -163,12 +180,17 @@
             	 	 <label>Teléfono:</label><br>
             		 <input type="text" name="ContactPhone" id="ContactPhone" value="" style="margin-left:20px"/><br><br>
                      <input type="reset" name="clear" id="clear" value="Limpiar" onClick="hideTextClear()" style="margin-left:3%"/>
-                     <input type="Submit" value="Enviar" onClick="sendMail()">
+                     <input type="button" value="Enviar" onClick="sendMail()">
                      
               	</div>
 			</form>
-            </div>
-            </div>
-            </div>
+			
+       </div>		
+      
+      </div>
+   
+</div>
+</div>
+</div>  
 </body>
 </html>
