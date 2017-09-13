@@ -1,196 +1,141 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Documento sin título</title>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+<link href="images/apple-touch-startup-image-320x460.png" media="(device-width: 320px)" rel="apple-touch-startup-image">
+<link href="images/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+<title>MPI</title>
+<link rel="stylesheet" href="css/framework7.css">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="framework7.css">
-<script type="text/javascript" src="index.js"></script>
-						
+<link rel="stylesheet" href="css/style2.css">
+<link type="text/css" rel="stylesheet" href="css/swipebox.css" />
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,900' rel='stylesheet' type='text/css'>
 </head>
+<body id="mobile_wrap">
+	<script src="https://apis.google.com/js/platform.js" async defer>
+	  {lang: 'es-419'}
+	</script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="iphone-inline-video-master/dist/iphone-inline-video.min.js"></script>
+    
+    <div class="statusbar-overlay">
+    </div>
 
-<body>
-			<div class="pages">
-  <div data-page="contact" class="page no-toolbar no-navbar">
-    <div class="page-content">
+    <div class="panel-overlay">
+    </div>
 
-	<div class="navbarpages graybg">
-		<div class="navbar_left">
-			<div class="logo_text">
-            	<a href="index.html"><img src="images/logo1.jpg" width="55px" height="55px"/></a>
-                <img src="images/logo_derecha3.jpg" width="70%" height="50px" style="position:absolute; top:0%; padding-left:10px; max-width:300px; margin-top:20; padding-top:0px; border-top:0;"/>
-            </div>
-		</div>							
+    <div class="panel panel-left panel-reveal">
+	<div class="view view-subnav">
+	<div class="pages">
+		<div data-page="panel-leftmenu" class="page pagepanel">	
+        	<div class="page-content">
+             </div>
+		</div>
 	</div>
-	
-    <div id="pages_maincontent">
-		<br>
-		<a href="index.html" class="backto"><img src="images/icons/black/back.png" alt="" title="" /></a>
-			
-		<h2 class="page_title">Genera tu cotización</h2>
-		<div class="page_single layout_fullwidth_padding">
-              
-			<form style="line-height:1">
-            	<div>
-                	<h2>Productos</h2>
-                    <div class="div-form-product">
-                       <label class="label-form-product">Asfalto Caucho</label>
-                       <input type="checkbox" class="checkbox-form-product" name="Productos1" id="Check1" onClick="hideText()" value="true"><br><br>
-                       <label class="label-form-bot-product" hidden="true" id="Label1">Cantidad</label>
-                       <input type="text" name="ProCantidad1" id="ProCantidad1" hidden="true" class="checkbox-form-bot-product" /><br><br>
-                    </div><br>
-                                
-                    <div class="div-form-product">
-                        <label class="label-form-product">Asfalto modificado con polímeros</label>
-                        <input type="checkbox"  class="checkbox-form-product" name="Productos2" id="Check2" onClick="hideText()" value="true"><br><br>
-                        <label class="label-form-bot-product" hidden="true" id="Label2">Cantidad</label>
-                        <input type="text" name="ProCantidad2" id="ProCantidad2" hidden="true" class="checkbox-form-bot-product"/><br><br>
-                    </div><br>
-                    
-                    <div class="div-form-product">
-                        <label class="label-form-product">Asfalto con mejoradores de adherencia</label>
-                        <input type="checkbox" class="checkbox-form-product" name="Productos3" id="Check3" onClick="hideText()" value="true"><br><br>
-                        <label class="label-form-bot-product" hidden="true" id="Label3">Cantidad</label>
-                        <input type="text" name="ProCantidad3" id="ProCantidad3" value="" hidden="true" class="checkbox-form-bot-product" /><br><br>
-                    </div><br>
-                    
-                     <div class="div-form-product">
-                        <label class="label-form-product">Asfalto Normalizado</label>
-                        <input type="checkbox" class="checkbox-form-product" name="Productos4" id="Check4" onClick="hideText()" value="true"><br><br>
-                        <label class="label-form-bot-product" hidden="true" id="Label4">Cantidad</label>
-                        <input type="text" name="ProCantidad4" id="ProCantidad4" value="" hidden="true" class="checkbox-form-bot-product"/><br><br>
-                     </div><br> 
-                    
-                    <div class="div-form-product">
-                        <label class="label-form-product">Sellado de grietas - POLYBIT</label>
-                        <input type="checkbox" class="checkbox-form-product" name="Productos5" id="Check5" onClick="hideText()" value="true"><br><br>
-                        <label class="label-form-bot-product" hidden="true" id="Label5">Cantidad</label>
-                        <input type="text" name="ProCantidad5" id="ProCantidad5" value="" hidden="true" class="checkbox-form-bot-product" /><br><br>
-                    </div><br> 
-                    
-                    <div class="div-form-product">
-                        <label class="label-form-product">Pavimento instantáneo - INSTAPAV</label>
-                        <input type="checkbox" class="checkbox-form-product" name="Productos6" id="Check6" onClick="hideText()" value="true"><br><br>
-                        <label class="label-form-bot-product" hidden="true" id="Label6">Cantidad</label>
-                        <input type="text" name="ProCantidad6" id="ProCantidad6" value="" hidden="true" class="checkbox-form-bot-product" /><br><br>
-                    </div><br>
-                     
-                    <div class="div-form-product">
-                        <label class="label-form-product">Emulsiones Asfálticas</label>
-                        <input type="checkbox" class="checkbox-form-product" name="Productos7" id="Check7" onClick="hideText()" value="true"><br><br>
-                        <label class="label-form-bot-product" hidden="true" id="Label7">Cantidad</label>
-                        <input type="text" name="ProCantidad7" id="ProCantidad7" value="" hidden="true" class="checkbox-form-bot-product" /><br><br>
-                    </div><br>  
-                    
-                    <h2>Laboratorio</h2>
-                    <div class="div-form-lab" id="div-1">
-                        <label class="label-form-lab">Determinación de la Limpieza Superficial de las Partículas de Agregado Grueso</label>
-                        <input type="checkbox" class="checkbox-form-lab" name="Laboratorio1" id="Check8" onClick="hideText()" value="true"><br><br>
-                        <label class="label-form-bot-lab" hidden="true" id="Label8">Cantidad</label>
-                        <input type="text" name="ProLab1" id="ProLab1" value="" hidden="true" class="checkbox-form-bot-lab" /><br><br>
-                    </div><br>
-                    
-                    <div class="div-form-lab" id="div-2">
-                        <label class="label-form-lab">Determinación de Terrones de Arcilla y Particulas Deleznables en Agregados</label>
-                        <input type="checkbox" class="checkbox-form-lab" name="Laboratorio2" id="Check9" onClick="hideText()" value="true"><br><br>
-                        <label class="label-form-bot-lab" hidden="true" id="Label9">Cantidad</label>
-                        <input type="text" name="ProLab2" id="ProLab2" value="" hidden="true" class="checkbox-form-bot-lab"  /><br><br>
-                    </div><br>
+	</div>  
+    </div>
+    <!--</div> -->
+    <div class="views">
+    <div class="view view-main">
+    <div class="pages">
+    <div data-page="index" class="page homepage">
+    <div class="page-content">
+	<div class="navbarpages whitebg">
+    <div class="navbar_left">
+    <div class="logo_text">
+    	<a href="index.html">
+			<img src="images/logo_izquierda3.gif" width="70px" height="50px" style="position:absolute; top:0%; padding-left:2px; margin-top:0; padding-top:0px; border-top:0;"/>
+            <img src="images/logo_derecha4.gif" width="70%" height="50px" style="position:absolute; top:0%; padding-left:65px; max-width:300px; margin-top:0; padding-top:0px; border-top:0;"/>
+          <!--  <img src="images/logo2.gif" width="65px" height="15px" style="position:absolute; top:50%; padding-left:2px;"/>-->
+        </a>
+   	</div>
+    </div>						
+   	</div>
+				<!-- Slider -->
+    <div class="swiper-container swiper-init" data-effect="slide" data-parallax="false" data-pagination=".swiper-pagination" data-paginationClickable="true">
+    	<div class="swiper-wrapper">
+			<div class="swiper-slide" style="background-image:url(images/photos/photo27.jpg); display:compact;">
+				
+  				<div id="tabla_iconos" style="margin:0; position:absolute; top: 100; left: 0; bottom:0; right: 0; width:inherit; height:15%; padding-bottom:70px;">
+					<table width="100%" cellspacing="5px" style="position:absolute; top:0; text-align:center;">
+						<tr>
+							<td width="24%">
+								<a href="#" onclick="cordova.InAppBrowser.open('http://www.mpi.net.co', '_blank', 'location=no')";> <img src="images/follow_Black.png" alt="a1" style="width:60%;"/><br>
+  <button class="Texto_Imagen"><b><i> Sigue tu<br>producto </i></b></button></a>
+							</td>
+                            <td width="24%">
+								<a href="core.html"> <img src="images/corebusiness_Black.png" alt="" style="width:60%;"/><br>
+  <button class="Texto_Imagen"><b><i>Core<br>Business</i></b></button></a>
+							</td>
+                            <td width="24%">
+								<a href="#" onclick="cordova.InAppBrowser.open('http://181.48.47.114:8077', '_blank', 'location=no' )";><img src="images/mpilabs_Black.png" alt="" style="width:60%;"/><br> 
+  <button class="Texto_Imagen"><b><i>MPI<br>Labs</i></b></button></a>
+							</td>
+                            <td width="24%">
+								<!--<a href="#" onclick="cordova.InAppBrowser.open('cotizacion.html', '_blank', 'location=no')";>-->
+                                <a href="cotizacion.html"><img src="images/siguetupedido_Black.png" alt="" style="width:60%;"/><br> 
+  <button class="Texto_Imagen"><b><i>Solicita tu<br>Cotización</i></b></button></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+						<!-- <div class="swiper-pagination"></div> -->
+            </div> <!-- FIN SLIDER- -->
+            <div class="swiper-slide" style="background-image:url(media/mpi2.gif); display:compact;">
+                <div id="tabla_iconos" style="margin:0; position:absolute; top: 100; left: 0; bottom:0; right: 0; width:inherit; height:15%;padding-bottom:70px;">
+						<table width="100%" cellspacing="5px" style="position:absolute; top:0; text-align:center;">
+                        	<tr>
+								<td width="24%">
+									<a href="Events.html"><img src="images/eventos_Black.png" alt="" style="width:50%;"/><br> 
+  <button class="Texto_Imagen"><b><i>Eventos</i></b></button></a>
+								</td>
+                                <td width="24%">
+									<a href="sedes.html"><img src="images/sedes_Black.png" alt="" style="width:50%;"/><br> 
+  <button class="Texto_Imagen"><b><i>Sedes</i></b></button></a> 
+								</td>
+                                <td width="24%">
+									<a href="photos.html"><img src="images/galeria_Black.png" alt="" style="width:50%;"/><br> 
+  <button class="Texto_Imagen"><b><i>Galería</i></b></button></a>
+								</td>
+                                <td width="24%">
+									<a href="bussiness_group.html"><img src="images/group_black.png" alt="" style="width:40%;"/><br> 
+  <button class="Texto_Imagen"><b><i>Grupo<br>Empresarial</i></b></button></a>
+								</td>
+							</tr>
+                      	</table>
+				</div>
+		<a class="youtube_Button" href="#" onclick="cordova.InAppBrowser.open('https://www.youtube.com/watch?v=8v_gssyUrJE&t=7s', '_blank', 'location=yes' )";>
+        	<img class="youtube_Icon" src="images/Youtube.png"/>
+            	<h6 class="yotube_text">Mira el video completo</h6>
+        	</a>
+            </div>
+        </div>
+         <ul id="navs" data-open="-" data-close="+">
+			<li><a href="contact.html"><img src="images/icons/black/contact.png" alt="" title="" border="6" /></a></li>
+		   	<li><a href="social.html"><img src="images/icons/black/twitter.png" alt="" title=""/></a></li>
+		    <li><a href="tel:0376228725" class="external"><img src="images/icons/black/phone.png" alt="" title="" /></a></li>
+		</ul>
+    </div>
+	</div>
+    </div>
+    </div>
+    </div>
+    </div>
 
-					<div class="div-form-lab" id="div-3">
-                        <label class="label-form-lab">Caracterización Total de Agregados</label>
-                        <input type="checkbox" class="checkbox-form-lab" name="Laboratorio3" id="Check10" onClick="hideText()" value="true"><br><br>
-                        <label class="label-form-bot-lab" hidden="true" id="Label10">Cantidad</label>
-                        <input type="text" name="ProLab3" id="ProLab3" value="" hidden="true" class="checkbox-form-bot-lab" /><br><br>
-                    </div><br>
-                    
-                    <div class="div-form-lab" id="div-4">
-                        <label class="label-form-lab">Caracterización Marshall Mezcla caliente en Contenido Óptimo de Asfalto</label>
-                        <input type="checkbox"  class="checkbox-form-lab" name="Laboratorio4" id="Check11" onClick="hideText()" value="true"><br><br>
-                        <label class="label-form-bot-lab" hidden="true" id="Label11">Cantidad</label>
-                        <input type="text" name="ProLab4" id="ProLab4" value="" hidden="true" class="checkbox-form-bot-lab" /><br><br>
-                    </div><br>
-                    
-                    <div class="div-form-lab" id="div-5">
-                        <label class="label-form-lab">Caracterización Total de Asfaltos Modificados</label>
-                        <input type="checkbox" class="checkbox-form-lab" name="Laboratorio5" id="Check15" onClick="hideText()" value="true"><br><br>
-                        <label class="label-form-bot-lab" hidden="true" id="Label15">Cantidad</label>
-                        <input type="text" name="ProLab5" id="ProLab5" value="" hidden="true" class="checkbox-form-bot-lab" /><br><br>
-                    </div><br>
-                    
-                    <div class="div-form-lab" id="div-6">
-                        <label class="label-form-lab">Caracterización Total de Emulsiones Convencionales</label>
-                        <input type="checkbox"  class="checkbox-form-lab" name="Laboratorio6" id="Check16" onClick="hideText()" value="true"><br><br>
-                        <label class="label-form-bot-lab" hidden="true" id="Label16">Cantidad</label>
-                        <input type="text" name="ProLab6" id="ProLab6" value="" hidden="true" class="checkbox-form-bot-lab" /><br><br>
-                    </div><br>
-                    
-                    <div class="div-form-lab" id="div-7">
-                        <label class="label-form-lab">Caracterización Total de Emulsiones Modificadas</label>
-                        <input type="checkbox" class="checkbox-form-lab" name="Laboratorio7" id="Check17" onClick="hideText()" value="true"><br><br>
-                        <label class="label-form-bot-lab" hidden="true" id="Label17">Cantidad</label>
-                        <input type="text" name="ProLab7" id="ProLab7" value="" hidden="true" class="checkbox-form-bot-lab" /><br><br>
-                    </div><br>
-                    
-                    <div class="div-form-lab" id="div-8">
-                        <label class="label-form-lab">Curva Reológica del Asfalto. Determinación de Viscosidad Brookfield</label>
-                        <input type="checkbox"  class="checkbox-form-lab" name="Laboratorio8" id="Check18" onClick="hideText()" value="true"><br><br>
-                        <label class="label-form-bot-lab" hidden="true" id="Label18">Cantidad</label>
-                        <input type="text" name="ProLab8" id="ProLab8" value="" hidden="true" class="checkbox-form-bot-lab" /><br><br>
-                    </div><br>
-                    
-                     <div class="div-form-lab" id="div-9">
-                        <label class="label-form-lab">Determinación de la Viscosidad Brookfield</label>
-                        <input type="checkbox" class="checkbox-form-lab" name="Laboratorio9" id="Check19" onClick="hideText()" value="true"><br><br>
-                        <label class="label-form-bot-lab" hidden="true" id="Label19">Cantidad</label>
-                        <input type="text" name="ProLab9" id="ProLab9" value="" hidden="true" class="checkbox-form-bot-lab" /><br><br>
-                    </div><br>
-                    
-                    <div class="div-form-lab" id="div-10">
-                        <label class="label-form-lab">Determinación contenido de parafinas ligantes asfálticos</label>
-                        <input type="checkbox"  class="checkbox-form-lab" name="Laboratorio10" id="Check20" onClick="hideText()" value="true"><br><br>
-                        <label class="label-form-bot-lab" hidden="true" id="Label20">Cantidad</label>
-                        <input type="text" name="ProLab10" id="ProLab10" value="" hidden="true" class="checkbox-form-bot-lab" /><br><br>
-                    </div><br>
-                    
-                    <h2>Servicios</h2>
-                    <div class="div-form-servicios" id="div-serv1">
-                        <label class="label-form-servicios">Mantenimiento Vial - Slurry Seal</label>
-                        <input type="checkbox" class="checkbox-form-servicios" name="Servicio1" id="Check12" onClick="hideText()" value="true"><br><br>
-                        <label class="label-form-bot-servicios" hidden="true" id="Label12">Comentarios</label>
-                        <input type="text" name="Servicio1" id="Servicio1" value="" hidden="true" class="checkbox-form-bot-servicios" /><br><br>
-                    </div><br>
-                    
-                    <div class="div-form-servicios" id="div-serv2">
-                        <label class="label-form-servicios">Exportacion/Importacion</label>
-                        <input type="checkbox" class="checkbox-form-servicios" name="Servicio2" id="Check13" onClick="hideText()" value="true"><br><br>
-                        <label class="label-form-bot-servicios" hidden="true" id="Label13">Comentarios</label>
-                        <input type="text" name="Servicio2" id="Servicio2" value="" hidden="true" class="checkbox-form-bot-servicios" /><br><br>
-                    </div><br>
-                    
-                    <div class="div-form-servicios" id="div-serv3">
-                        <label class="label-form-servicios">Logística de Transporte</label>
-                        <input type="checkbox" class="checkbox-form-servicios" name="Servicio3" id="Check14" onClick="hideText()" value="true"><br><br>
-                        <label class="label-form-bot-servicios" hidden="true" id="Label14">Comentarios</label>
-                        <input type="text" name="Servicio3" id="Servicio3" value="" hidden="true" class="checkbox-form-bot-servicios" /><br><br>
-                    </div><br>
-                    
-                     <label>Nombre:</label><br>
-            		 <input type="text" name="ContactName" id="ContactName" value="" style="margin-left:20px" /><br><br>
-            	 	 <label>Teléfono:</label><br>
-            		 <input type="text" name="ContactPhone" id="ContactPhone" value="" style="margin-left:20px"/><br><br>
-                     <input type="reset" name="clear" id="clear" value="Limpiar" onClick="hideTextClear()" style="margin-left:3%"/>
-                     <input type="button" value="Enviar" onClick="sendMail()">
-                     
-              	</div>
-			</form>
-			
-       </div>		
-      
-      </div>
-   
-</div>
-</div>
-</div>  
+ 
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js" ></script>
+<script type="text/javascript" src="js/framework7.js"></script>
+<script type="text/javascript" src="js/jquery.swipebox.js"></script>
+<script type="text/javascript" src="js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="js/email.js"></script>
+<script type="text/javascript" src="js/circlemenu.js"></script>
+<script type="text/javascript" src="js/audio.min.js"></script>
+<script type="text/javascript" src="js/my-app.js"></script>
 </body>
 </html>
